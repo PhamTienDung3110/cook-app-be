@@ -37,7 +37,7 @@ app.post('/chat', async (req, res) => {
         res.json(response.data);
     } catch (error) {
         console.error('Error calling OpenAI:', error);
-        res.status(500).json({ error: 'Failed to fetch response from OpenAI' });
+        res.status(500).json({ error: error });
     }
 });
 
