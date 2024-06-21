@@ -1,0 +1,32 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/ping",
+        "methods": ["GET"],
+        "dest": "/app.js"
+      },
+      {
+        "src": "/chat",
+        "methods": ["POST"],
+        "dest": "/app.js"
+      }
+    ],
+    "env": {
+      "OPENAI_API_KEY": "@openai_api_key"
+    },
+    "probes": [
+      {
+        "path": "/ping",
+        "mustContain": "halo",
+        "status": 200
+      }
+    ]
+  }
+  
