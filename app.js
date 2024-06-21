@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 const openaiApiKey = process.env.OPENAI_API_KEY;
-console.log('openaiApiKey',openaiApiKey);
+
 app.get('/ping',async (req, res) => {
     return res.json('halo0000hhhhh')
 })
