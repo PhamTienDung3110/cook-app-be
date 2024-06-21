@@ -8,18 +8,9 @@
     ],
     "routes": [
       {
-        "src": "/ping",
-        "methods": ["GET"],
-        "dest": "/app.js"
-      },
-      {
-        "src": "/chat",
-        "methods": ["POST"],
-        "dest": "/app.js"
+        "src": "/(.*)",
+        "dest": "app.js"
       }
-    ],
-    "env": {
-      "OPENAI_API_KEY": "@openai_api_key"
-    }
+    ]
   }
   
