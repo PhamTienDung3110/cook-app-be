@@ -9,6 +9,10 @@ app.use(cors());
 
 const openaiApiKey = process.env.OPENAI_API_KEY;
 
+app.get('/ping',async (req, res) => {
+    return res.json('halo')
+})
+
 app.post('/chat', async (req, res) => {
     const { prompt } = req.body;
 
